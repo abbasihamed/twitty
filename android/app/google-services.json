@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "884097224610",
+    "project_id": "twitty-fdfce",
+    "storage_bucket": "twitty-fdfce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884097224610:android:e575aa3c384ec6042eacfb",
+        "android_client_info": {
+          "package_name": "com.example.twitty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884097224610-iuineq13kc183slhmjelios93bupg2k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH7qCW8_f_woZO4htX9QWbzFiffG3TUfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884097224610-iuineq13kc183slhmjelios93bupg2k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
