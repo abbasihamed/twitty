@@ -10,7 +10,7 @@ class LikesScreen extends HookWidget {
       child: Scaffold(
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 86,
               child: Center(
                 child: Text('Likes'),
