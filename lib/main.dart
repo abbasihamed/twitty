@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:twitty/src/core/shared_preference.dart';
-import 'package:twitty/src/mobile/screens/auth/twitter_auth.dart';
+import 'package:twitty/src/config/theme/app_theme.dart';
+import 'package:twitty/src/config/shared_preference.dart';
+import 'package:twitty/src/mobile/components/custom_bottom_navigation_bar.dart';
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Twitty",
-      home: TwitterAuth(),
+      theme: AppTheme.appTheme,
+      home: CustomBottomNavigationBar(),
     );
   }
 }

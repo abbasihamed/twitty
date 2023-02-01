@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:twitty/src/core/shared_preference.dart';
-import 'package:twitty/src/logic/sign_in_controller.dart';
+import 'package:twitty/src/logic/sign_in.dart';
 
 class TwitterAuth extends StatelessWidget {
   const TwitterAuth({super.key});
@@ -25,7 +24,7 @@ Log in to your Twitter account
               ),
               ElevatedButton.icon(
                 onPressed: () {
-                  SignInController().login();
+                  SignInController().fireBase();
                 },
                 icon: Image.asset(
                   'assets/icons/twitter.png',

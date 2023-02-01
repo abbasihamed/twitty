@@ -1,11 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/widgets.dart';
 import 'package:twitter_login/entity/auth_result.dart';
 import 'package:twitter_login/twitter_login.dart';
 import 'package:twitty/src/core/constans.dart';
-import 'package:twitty/src/core/shared_preference.dart';
+import 'package:twitty/src/config/shared_preference.dart';
 
-class SignInController extends ChangeNotifier {
+class SignInController {
   Future<AuthResult> twitterLogin() async {
     final auth = TwitterLogin(
       apiKey: apiKey,
@@ -34,9 +33,5 @@ class SignInController extends ChangeNotifier {
     } catch (e) {
       print('Has Error');
     }
-  }
-
-  login() {
-    fireBase();
   }
 }

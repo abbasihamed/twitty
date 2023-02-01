@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:twitty/src/logic/get_index.dart';
+import 'package:twitty/src/config/get_index.dart';
 import 'package:twitty/src/mobile/screens/home/home.dart';
+import 'package:twitty/src/mobile/screens/profile/profile.dart';
 import 'package:twitty/src/mobile/screens/likes/likes.dart';
-import 'package:twitty/src/mobile/screens/week_history/history.dart';
 
 class CustomBottomNavigationBar extends HookWidget {
   const CustomBottomNavigationBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final current = useState(0);
+    final current = useState(1);
     return Scaffold(
       body: _getScreen(current.value),
       bottomNavigationBar: BottomNavigationBar(
@@ -20,12 +20,12 @@ class CustomBottomNavigationBar extends HookWidget {
         currentIndex: current.value,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.person),
+            label: 'profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: 'History',
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
@@ -37,8 +37,8 @@ class CustomBottomNavigationBar extends HookWidget {
   }
 
   Widget _getScreen(int index) => <Widget>[
+        const ProfileScreen(),
         const HomeScreen(),
-        const WeekHistoryScreen(),
         const LikesScreen(),
       ].getCurrent(index);
 }
